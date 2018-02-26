@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2016 Klarna AB
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @category   Klarna
+ * @package    Klarna_KcoAltAddress
+ * @author     Fei Chen <fei.chen@klarna.com>
+ */
+-->
+<config>
+    <sections>
+        <payment>
+            <groups>
+                <klarna_emd translate="label" module="klarna_altaddress">
+                    <label>Klarna Emd Data</label>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <other_delivery_address_enabled translate="label">
+                            <label>Other Delivery Address Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>106</sort_order>
+                        </other_delivery_address_enabled>
+                        <other_delivery_address_first_name translate="label comment">
+                            <label>Other Delivery Address First Name</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>107</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_first_name>
+                        <other_delivery_address_last_name translate="label comment">
+                            <label>Other Delivery Address Last Name</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>108</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_last_name>
+                        <other_delivery_address_street_address translate="label comment">
+                            <label>Other Delivery Address Street Address</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>109</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_street_address>
+                        <other_delivery_address_street_number translate="label comment">
+                            <label>Other Delivery Address Street Number</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>110</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_street_number>
+                        <other_delivery_address_postcode translate="label comment">
+                            <label>Other Delivery Address Post Code</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>111</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_postcode>
+                        <other_delivery_address_city translate="label comment">
+                            <label>Other Delivery Address City</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>112</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_city>
+                        <other_delivery_address_country translate="label comment">
+                            <label>Other Delivery Address Country</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>113</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_country>
+                        <other_delivery_address_shipping_method translate="label comment">
+                            <label>Other Delivery Address Shipping Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>klarna_altaddress/system_config_source_shipping_method</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>114</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_shipping_method>
+                        <other_delivery_address_shipping_type translate="label comment">
+                            <label>Other Delivery Address Shipping Type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>klarna_altaddress/system_config_source_shipping_type</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>115</sort_order>
+                            <depends>
+                                <other_delivery_address_enabled>1</other_delivery_address_enabled>
+                            </depends>
+                        </other_delivery_address_shipping_type>
+                    </fields>
+                </klarna_emd>
+            </groups>
+        </payment>
+    </sections>
+</config>
