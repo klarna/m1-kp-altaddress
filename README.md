@@ -7,7 +7,7 @@ The Klarna_KpAltAddress Sample module adds support for EMD to Klarna Payments in
 ## Requirements
 To use this module you must:
  * Have an account with [Klarna](https://www.klarna.com)
- * "Purchase" and install the Klarna Checkout for M1 module from the [Magento Marketplace](https://marketplace.magento.com/klarna-klarna-kco.html).
+ * "Purchase" and install the Klarna Payments for M1 module from the [Magento Marketplace](https://marketplace.magento.com/klarna-klarna-payments.html).
 
 ## Implementation Details
 
